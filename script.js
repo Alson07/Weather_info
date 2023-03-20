@@ -6,10 +6,10 @@ const options = {
 	}
 };
 const getWeather = (city)=>{
-    const cityName = city
-    cityName.innerHTML= city
+    // const cityName = city
+    cityName.innerHTML = city
 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
-.then(response => response.json())
+.then( response => response.json())
 	.then((response) => { 
         console.log(response)
         //cloud_pct.innerHTML = response.cloud_pct
@@ -32,4 +32,5 @@ submit.addEventListener("click", (e)=>{
     e.preventDefault()
     getWeather(city.value)
 })
-getWeather("London")
+
+getWeather("Kathmandu")
